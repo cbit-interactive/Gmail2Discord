@@ -1,17 +1,16 @@
-package org.cbit.main;
+package org.cbit.main
 
-import com.cbit.GmailConnection;
-import net.cbit.discord.JdaListener;
+import com.cbit.GmailConnection
+import net.cbit.discord.JdaListener
 
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Setting up gmail-discord communication...");
-        GmailConnection gmail = new GmailConnection();
-        gmail.gmailConnection();
-
-        JdaListener jda = new JdaListener();
-        jda.jdaSetup();
+object Main {
+    @Throws(Exception::class)
+    @JvmStatic
+    fun main(args: Array<String>) {
+        println("Setting up gmail-discord communication...")
+        val gmail = GmailConnection()
+        gmail.gmailConnection()
+        val jda = JdaListener()
+        jda.jdaSetup()
     }
 }
