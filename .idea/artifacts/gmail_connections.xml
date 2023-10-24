@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="gmail-connections">
+    <output-path>$PROJECT_DIR$/out/artifacts/gmail_connections</output-path>
+    <root id="archive" name="gmail-connections.jar" />
+  </artifact>
+</component>
