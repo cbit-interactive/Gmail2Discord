@@ -7,11 +7,16 @@ import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.EventListener;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
+import java.util.Scanner;
+
 public class JdaListener implements EventListener {
 
-    String token = "MTE1NDk2Mzk4NzA0NjMzODY1Mg.GWcEoh.0Ms3NwXrYbjF9NvYAISQfFExQjkrq2vBKCI5tQ";
-
     public void jdaSetup() throws InterruptedException {
+
+        Scanner jdaSetupToken = new Scanner(System.in);
+        System.out.println("Discord bot token: ");
+        String token = jdaSetupToken.nextLine();
+
         JDA api = JDABuilder.createDefault(token)
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT)
                 .build();
